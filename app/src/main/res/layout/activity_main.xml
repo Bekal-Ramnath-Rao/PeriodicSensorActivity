@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/thresholdEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/periodEditText"
+                android:layout_weight="1"
+                android:hint="Enter Threshold"
+                android:inputType="numberDecimal" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:text="Set threshold for Proximity Sensor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/accelerometerValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@id/gpsValueTextView"
+                android:layout_marginTop="416dp"
+                android:layout_weight="1"
+                android:text="Magnetometer Value: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/gyroscopeValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Gyroscope Value: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/gpsValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gyroscopeValueTextView"
+                android:text="GPS Value: "
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/periodEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Period"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <Button
+        android:id="@+id/ButtonforStartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thresholdEditText"
+        android:layout_centerHorizontal="true"
+        android:text="Read Sensor values"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
